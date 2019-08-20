@@ -14,13 +14,13 @@ class CrearTablaLibro extends Migration
     public function up()
     {
         Schema::create('libro', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('titulo', 100);
             $table->string('isbn', 30);
             $table->string('autor', 100);
             $table->unsignedTinyInteger('cantidad');
-            $table->string('editorial', 50)->nullable();
-            $table->string('foto', 50)->nullable();
+            $table->string('editorial', 50)->nullable;
+            $table->string('foto', 50)->nullable;
             $table->timestamps();
         });
     }
